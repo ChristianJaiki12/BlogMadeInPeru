@@ -1,0 +1,291 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0px auto;
+
+    
+}
+header{
+    margin-top: 0px;
+}
+
+header h1{
+    background: white;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    color: rgb(255, 0, 0);
+    border-bottom: 3px solid rgb(255, 0, 0);
+    font-size: 50px;
+    
+}
+
+nav{
+    background: rgb(249, 249, 249);
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin-bottom: 30px;
+    
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+nav ul li{
+    list-style: none;
+    margin: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 30px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+nav ul li a:hover{
+    color:black;
+    font-size: 19px;
+    font-weight: bold;
+    
+}
+
+/* style home */
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+   
+}
+
+.paragraph{
+    font-size: 35px;
+    margin-right: 100px;
+
+}
+.images{
+    width: 400px;
+    height: 300px;
+
+   
+
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* style blog */
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10 px black;
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 45px;
+    color: white;
+    background: black;
+    text-align: center;
+}
+
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: black;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.card .back .link {
+    border-top: solid 1px white;
+    height: 50px;
+    line-height: 50px;
+
+}
+
+.card .back .link a{
+    color: white;
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+#blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/* style admin */
+
+#admin{
+   background: url(img/fondo2.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;  
+    
+}
+
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    margin-top: 200px;
+
+
+}
+
+.login-box .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top:-50px;
+    left: calc(50% - 50px);
+}
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.login-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+
+}
+.login-box input{
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.password{
+    border: none;
+    border-bottom: 1px white solid;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+.text{
+    border: none;
+    border-bottom: 1px white solid;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+
+}
+
+.boton {
+    border: none;
+    outline: none;
+    height: 40px;
+    background:#b80f22;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+ }
+
+ .login-box a:hover{
+    color:white;
+ }
